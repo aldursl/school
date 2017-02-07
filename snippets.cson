@@ -1,0 +1,99 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+
+##############################################################################
+##############################################################################
+'.text.html':
+  'Clickthrough':
+    'prefix': 'clickthrough'
+    'body': """<a href="${clickthrough('$1', 'CONTACTS_LIST.EMAIL_HASH', 'CONTACTS_LIST.TRACK', 'TRACKING1_TXT=' + TRACKING1_TXT, 'TO='+TO)}"><img src="https://ak1.ostkcdn.com/img/mxc/$2" width="$3" alt="$4" border="0" style="display:block;" /></a>"""
+
+##############################################################################
+##############################################################################
+  'Assign':
+    'prefix': 'assign'
+    'body': '<#assign $1=$2>'
+
+##############################################################################
+##############################################################################
+  'Include':
+    'prefix': 'include'
+    'body': '<#include "cms:/$1">'
+
+##############################################################################
+##############################################################################
+  'Table':
+    'prefix': 'tabl'
+    'body': """
+<table class="$2" align="center" width="$1" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>$3
+    </td>
+  </tr>
+</table>
+    """
+
+##############################################################################
+##############################################################################
+  'MSO':
+    'prefix': 'mso'
+    'body': """
+<!--[if !mso]><!-->
+<div class="show" style="font-size:0%; max-height:0; overflow:hidden; display:none; visibility:hidden; mso-hide:all;">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="show" style="display:none;">
+    <tr>
+      <td>
+        <a href="${clickthrough('$1', 'CONTACTS_LIST.EMAIL_HASH', 'CONTACTS_LIST.TRACK', 'TRACKING1_TXT=' + TRACKING1_TXT, 'TO='+TO)}"><img src="https://ak1.ostkcdn.com/img/mxc/$2" alt="$3" width="320" border="0" style="display:block; width:320px;"/></a>
+      </td>
+    </tr>
+  </table>
+</div>
+<!--<![endif]-->
+    """
+
+##############################################################################
+##############################################################################
+  'Comment':
+    'prefix': 'c'
+    'body': '<!-- $1 -->'
+
+##############################################################################
+##############################################################################
+  'EMAIL_HASH':
+    'prefix': 'eh'
+    'body': '3BF7309708E0F3D9E053279C010A0AF1'
+
+##############################################################################
+##############################################################################
+  'Spacer':
+    'prefix': 'spacer'
+    'body': """
+<td class="$3" width="$2" height="$1" style="font-size:1px; mso-line-height-rule:exactly; line-height:$1px;">&#160;</td>
+    """
+
+##############################################################################
+##############################################################################
+  'Helv':
+    'prefix': 'helv'
+    'body': """
+style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; $1"
+    """
